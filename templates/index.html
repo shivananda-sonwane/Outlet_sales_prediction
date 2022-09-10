@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict Sales of the Outlet</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="number" name="Item_Weight" id="Item_Weight" placeholder="Item Weight">
+            <input type="text" name="Item_Fat_Content" id="Item_Fat_Content" placeholder="Item Fat Content">
+            <input type="number" name="Item_Visibility" id="Item_Visibility" placeholder="Item Visibility">
+            <input type="text" name="Item_Type" id="Item_Type" placeholder="Item Type">
+            <input type="number" name="Item_MRP" id="Item_MRP" placeholder="Item MRP">
+            <input type="text" name="Outlet_Size" id="Outlet_Size" placeholder="Outlet Size">
+            <input type="text" name="Outlet_Location_Type" id="Outlet_Location_Type" placeholder="Outlet Location Type" step="any">
+            <input type="text" name="Outlet_Type" id="Outlet_Type" placeholder="Outlet Type" step="any">
+            <input type="number" name="Outlet_Age" id="Outlet_Age" placeholder="Outlet_Age" step="any">
+
+
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
