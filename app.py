@@ -51,8 +51,11 @@ def index():
             quant = ['Item_Weight', 'Item_Visibility', 'Item_MRP', 'Outlet_Age']
 
             ohe = pickle.load(open('ohe.pkl', 'rb'))
+            print(ohe)
             sc = pickle.load(open('sc.pkl', 'rb'))
+            print(sc)
             dtregressor = pickle.load(open('dtregressor.pkl', 'rb'))
+            print(dtregressor)
 
             encoded_data = ohe.transform(df[quali])
 
